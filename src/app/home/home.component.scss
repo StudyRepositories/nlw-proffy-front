@@ -1,0 +1,131 @@
+@import 'src/styles/variables.scss';
+
+#section_home {
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 2%;
+}
+
+.logo {
+    grid-area: logo;
+    padding-top: 32px;
+    color: $md-text-in-primary;
+
+    &__image {
+        width: 100%;
+    }
+
+    &__title {
+        display: none;
+    }
+}
+
+.banner {
+    grid-area: image;
+    width: 100%;
+    margin: 32px 0;
+}
+
+.buttons {
+    grid-area: button;
+    color: $md-button-text;
+    padding: 32px 0;
+
+    .button {
+        width: 300px;
+        height: 75px;
+        margin: 0 auto;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        padding: 16px 24px;
+        border-radius: 8px;
+
+        font-size: 2.4rem;
+
+        &:first-of-type {
+            margin-bottom: 16px;
+        }
+
+        &__icon {
+            padding-right: 8px;
+            vertical-align: middle;
+        }
+
+        &__label {
+            font-family: 'Archivo', sans-serif;
+        }
+
+        &--study {
+            background-color: $md-primary-lighter;
+
+            &:hover {
+                background-color: $md-primary-light;
+            }
+        }
+
+        &--teach {
+            background-color: $md-secondary;
+
+            &:hover {
+                background-color: $md-secondary-dark;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    #section_home {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 2fr 1fr 2fr;
+        grid-template-rows: 3fr 1fr;
+        grid-template-areas: 'logo image image' 'button button text';
+    }
+
+    .logo {
+        padding-top: 0;
+
+        &__image {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        &__title {
+            display: block;
+        }
+    }
+
+    .banner {
+        margin:  0;
+    }
+
+    .buttons {
+        padding: 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .button {
+            &:first-of-type {
+                margin-bottom: 0;
+                margin-right: 16px;
+            }
+        }
+    }
+}
