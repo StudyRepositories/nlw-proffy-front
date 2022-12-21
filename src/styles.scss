@@ -3,30 +3,30 @@
 @import 'src/styles/fonts.scss';
 
 :root {
-    font-size: 60%;
+	font-size: 60%;
 }
 
 @media (min-width: 700px) {
-    :root {
-        font-size: 62.5%;
-    }
+	:root {
+		font-size: 62.5%;
+	}
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 html,
 body {
-    height: 100vh;
-    background-color: $md-primary;
+	height: 100vh;
+	background-color: $md-primary;
 }
 
 .container {
-    width: 100%;
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 0 2%;
+	width: 100%;
+	max-width: 1280px;
+	margin: 0 auto;
+	padding: 0 2%;
 }

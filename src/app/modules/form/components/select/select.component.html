@@ -1,20 +1,20 @@
 <section class="wrapper">
-    <span class="label">{{label}}</span>
-    <div class="select" (mouseleave)="close()">
-        <div class="display" (click)="openClose()">
-            <span class="display__value" [innerText]="value != null ? options.at(value).getName() : displayLabel"></span>
-            <span class="display__icon">
-                <fa-icon *ngIf="isHidden; else arrowUp" [icon]="['fas', 'chevron-down']"></fa-icon>
-                <ng-template #arrowUp>
-                    <fa-icon [icon]="['fas', 'chevron-up']"></fa-icon>
-                </ng-template>
-            </span>
-        </div>
-        
-        <div class="options" [hidden]="isHidden">
-            <div *ngFor="let opt of options; let id = index" class="options__single" [attr.value]="id" (click)="onClickOption($event)">
-                {{opt.getName()}}
-            </div>
-        </div>
-    </div>
+	<span class="label">{{label}}</span>
+	<div class="select" (mouseleave)="close()">
+		<div class="display" (click)="openClose()">
+			<span class="display__value" [innerText]="value != null ? options.at(value).getName() : displayLabel"></span>
+			<span class="display__icon">
+				<fa-icon *ngIf="isHidden; else arrowUp" [icon]="['fas', 'chevron-down']"></fa-icon>
+				<ng-template #arrowUp>
+					<fa-icon [icon]="['fas', 'chevron-up']"></fa-icon>
+				</ng-template>
+			</span>
+		</div>
+
+		<div class="options" [hidden]="isHidden">
+			<div *ngFor="let opt of options; let id = index" class="options__single" [attr.value]="id" (click)="onClickOption($event)">
+				{{opt.getName()}}
+			</div>
+		</div>
+	</div>
 </section>

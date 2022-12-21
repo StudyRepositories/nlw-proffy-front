@@ -1,32 +1,32 @@
 <section id="section__teachers">
-    <header class="header">
-        <div class="container">
+	<header class="header">
+		<div class="container">
 
-            <div class="header__links">
-                <a class="link__single" routerLink="/">
-                    <fa-icon [icon]="['fas', 'left-long']"></fa-icon>
-                </a>
-                <img class="link__single link__logo" src="assets/images/logo.svg" alt="Proffy">
-            </div>
+			<div class="header__links">
+				<a class="link__single" routerLink="/">
+					<fa-icon [icon]="['fas', 'left-long']"></fa-icon>
+				</a>
+				<img class="link__single link__logo" src="assets/images/logo.svg" alt="Proffy">
+			</div>
 
-            <div class="header__text">
-                Estes são os professores disponíveis
-            </div>
+			<div class="header__text">
+				Estes são os professores disponíveis
+			</div>
 
-            <div class="header__filter">
-                <form-select label="Matéria" displayLabel="Selecione uma Matéria" [options]="subjects"></form-select>
-                <form-select label="Dia da Semana" displayLabel="Selecione uma Dia" [options]="weekdays"></form-select>
-                <form-time label="Hora" [minutesInterval]="interval"></form-time>
-                <button class="filter__button button button--green button--rounded">Filtrar</button>
-            </div>
-        </div>
-    </header>
+			<div class="header__filter">
+				<form-select label="Matéria" displayLabel="Selecione uma Matéria" [options]="subjects"></form-select>
+				<form-select label="Dia da Semana" displayLabel="Selecione uma Dia" [options]="weekdays"></form-select>
+				<form-time label="Hora" [minutesInterval]="interval"></form-time>
+				<button class="filter__button button button--green button--rounded">Filtrar</button>
+			</div>
+		</div>
+	</header>
 
-    <div class="teachers">
-        <div class="container">
-            <div class="teachers__empty">
-                Nenhum professor encontrado com sua pesquisa.
-            </div>
-        </div>
-    </div>
+	<div class="teachers">
+		<div class="container">
+			<div class="teachers__empty">
+				Nenhum professor encontrado com sua pesquisa.
+			</div>
+		</div>
+	</div>
 </section>

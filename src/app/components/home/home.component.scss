@@ -2,73 +2,73 @@
 @import 'src/styles/buttons.scss';
 
 :host {
-    width: 100%;
-    height: 100%;
+	width: 100%;
+	height: 100%;
 
-    display: grid;
-    align-content: center;
+	display: grid;
+	align-content: center;
 }
 
 .logo {
-    grid-area: logo;
-    padding-top: 32px;
-    color: $md-text-in-primary;
+	grid-area: logo;
+	padding-top: 32px;
+	color: $md-text-in-primary;
 
-    &__image {
-        width: 100%;
-    }
+	&__image {
+		width: 100%;
+	}
 
-    &__title {
-        display: none;
-    }
+	&__title {
+		display: none;
+	}
 }
 
 .banner {
-    grid-area: image;
-    width: 100%;
-    margin: 32px 0;
+	grid-area: image;
+	width: 100%;
+	margin: 32px 0;
 }
 
 .buttons {
-    grid-area: button;
+	grid-area: button;
 
-    display: grid;
-    grid-template: repeat(2, 1fr);
-    gap: 16px;
+	display: grid;
+	grid-template: repeat(2, 1fr);
+	gap: 16px;
 
-    padding: 32px 0;
-    color: $md-button-text;
+	padding: 32px 0;
+	color: $md-button-text;
 }
 
 @media screen and (min-width: 426px) {
-    .buttons {
-        grid-template: 1fr / repeat(2, 1fr);
-    }
+	.buttons {
+		grid-template: 1fr / repeat(2, 1fr);
+	}
 }
 
 @media screen and (min-width: 1024px) {
 
-    .home__container {
-        display: grid;
-        grid-template-columns: 2fr 1fr 2fr;
-        grid-template-rows: 3fr 1fr;
-        grid-template-areas: 'logo image image' 'button button text';
-    }
+	.home__container {
+		display: grid;
+		grid-template-columns: 2fr 1fr 2fr;
+		grid-template-rows: 3fr 1fr;
+		grid-template-areas: 'logo image image' 'button button text';
+	}
 
-    .logo {
-        padding-top: 0;
+	.logo {
+		padding-top: 0;
 
-        &__image {
-            width: 90%;
-            margin: 0 auto;
-        }
+		&__image {
+			width: 90%;
+			margin: 0 auto;
+		}
 
-        &__title {
-            display: block;
-        }
-    }
+		&__title {
+			display: block;
+		}
+	}
 
-    .banner {
-        margin: 0;
-    }
+	.banner {
+		margin: 0;
+	}
 }

@@ -1,7 +1,7 @@
 export abstract class ArrayUtils {
 
-    public static rotateArray(): void {
+	public static rotateArray(): void {
 
-    }
+	}
 
 }

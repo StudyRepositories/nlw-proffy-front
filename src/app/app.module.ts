@@ -12,22 +12,22 @@ import { fas } from '@fortawesome/free-solid-svg-icons';
 
 
 @NgModule({
-    declarations: [
-        AppComponent,
-        HomeComponent,
-        TeacherListComponent
-    ],
-    providers: [],
-    bootstrap: [AppComponent],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        FormModule,
-        FontAwesomeModule
-    ]
+	declarations: [
+		AppComponent,
+		HomeComponent,
+		TeacherListComponent
+	],
+	providers: [],
+	bootstrap: [AppComponent],
+	imports: [
+		BrowserModule,
+		AppRoutingModule,
+		FormModule,
+		FontAwesomeModule
+	]
 })
 export class AppModule {
-    constructor(library: FaIconLibrary) {
-        library.addIconPacks(fab, far, fas);
-    }
+	constructor(library: FaIconLibrary) {
+		library.addIconPacks(fab, far, fas);
+	}
 }

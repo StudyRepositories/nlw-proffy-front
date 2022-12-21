@@ -1,37 +1,37 @@
 @import '../../styles/default.styles.scss';
 
 .picker__options {
-    width: 100%;
-    max-height: $md-default-height * 5;
+	width: 100%;
+	max-height: $md-default-height * 5;
 
-    background-color: $md-input-background;
+	background-color: $md-input-background;
 
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
 
-    overflow: none;
+	overflow: none;
 
-    position: absolute;
-    top: $md-default-height;
+	position: absolute;
+	top: $md-default-height;
 
-    &--hidden {
-        display: none;
-    }
+	&--hidden {
+		display: none;
+	}
 }
 
 .options {
-    &__single {
-        min-height: $md-default-height;
-        padding: $md-default-padding;
+	&__single {
+		min-height: $md-default-height;
+		padding: $md-default-padding;
 
-        color: $md-text-base;
-        text-align: center;
-        line-height: $md-default-height;
+		color: $md-text-base;
+		text-align: center;
+		line-height: $md-default-height;
 
-        &:hover,
-        &--selected {
-            background-color: $md-line-in-white;
-        }
-    }
+		&:hover,
+		&--selected {
+			background-color: $md-line-in-white;
+		}
+	}
 
 }

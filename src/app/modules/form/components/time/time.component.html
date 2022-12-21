@@ -1,29 +1,29 @@
 <section class="wrapper">
-    <span class="label">{{label}}</span>
-    <div class="select" (mouseleave)="close()">
-        <div class="display" (click)="openClose()">
-            <span class="display__value">{{value}}</span>
-            <span class="display__icon">
-                <fa-icon [icon]="['far', 'clock']"></fa-icon>
-            </span>
-        </div>
+	<span class="label">{{label}}</span>
+	<div class="select" (mouseleave)="close()">
+		<div class="display" (click)="openClose()">
+			<span class="display__value">{{value}}</span>
+			<span class="display__icon">
+				<fa-icon [icon]="['far', 'clock']"></fa-icon>
+			</span>
+		</div>
 
-        <div class="picker__options" [ngClass]="{'picker__options--hidden': isHidden}">
-            <div class="hours">
-                <div class="options" (mousewheel)="onWheelHours($event)">
-                    <div class="options__single" *ngFor="let hour of displayHours"
-                        [ngClass]="{'options__single--selected': hour == selectedHour}" [attr.value]="hour"
-                        (click)="onClickHour($event)">{{hour.toString().padStart(2, '0')}}</div>
-                </div>
-            </div>
+		<div class="picker__options" [ngClass]="{'picker__options--hidden': isHidden}">
+			<div class="hours">
+				<div class="options" (mousewheel)="onWheelHours($event)">
+					<div class="options__single" *ngFor="let hour of displayHours"
+						[ngClass]="{'options__single--selected': hour == selectedHour}" [attr.value]="hour"
+						(click)="onClickHour($event)">{{hour.toString().padStart(2, '0')}}</div>
+				</div>
+			</div>
 
-            <div class="minutes">
-                <div class="options" (mousewheel)="onWheelMinutes($event)">
-                    <div class="options__single" *ngFor="let minute of displayMinutes"
-                        [ngClass]="{'options__single--selected': minute == selectedMinute}" [attr.value]="minute"
-                        (click)="onClickMinute($event)">{{minute.toString().padStart(2, '0')}}</div>
-                </div>
-            </div>
-        </div>
-    </div>
+			<div class="minutes">
+				<div class="options" (mousewheel)="onWheelMinutes($event)">
+					<div class="options__single" *ngFor="let minute of displayMinutes"
+						[ngClass]="{'options__single--selected': minute == selectedMinute}" [attr.value]="minute"
+						(click)="onClickMinute($event)">{{minute.toString().padStart(2, '0')}}</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </section>
