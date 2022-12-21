@@ -1,0 +1,43 @@
+@import 'src/styles/variables.scss';
+@import 'src/styles/fonts.scss';
+
+$md-default-height: 48px;
+$md-default-padding: 0 8px;
+
+:host {
+    width: 100%;
+    display: block;
+}
+
+.label {
+    color: $md-text-in-primary;
+}
+
+.select {
+    cursor: pointer;
+    user-select: none;
+    background-color: $md-input-background;
+    position: relative;
+}
+
+.display {
+    display: grid;
+    grid-template-columns: 11fr 1fr;
+    padding: $md-default-padding;
+
+    font-size: 1.6rem;
+
+    &__value,
+    &__icon {
+        color: $md-small-info;
+        line-height: $md-default-height;
+    }
+
+    &__value {
+        justify-self: start;
+    }
+
+    &__icon {
+        justify-self: end;
+    }
+}

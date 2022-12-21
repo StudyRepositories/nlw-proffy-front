@@ -1,0 +1,80 @@
+@import 'src/styles/variables.scss';
+@import 'src/styles/fonts.scss';
+@import 'src/styles/buttons.scss';
+
+$md-default-padding: 16px;
+$md-header-height: 24px;
+
+:host {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: $md-background;
+}
+
+.header {
+    color: $md-title-in-primary;
+    background-color: $md-primary;
+    padding: $md-default-padding 0;
+
+    &__links {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        .link__single {
+            height: $md-header-height;
+            font-size: $md-header-height;
+            line-height: $md-header-height;
+        }
+
+        .link__logo {
+            justify-self: end;
+        }
+    }
+
+    &__text {
+        margin: 16px 0;
+        color: $md-title-in-primary;
+        font: 700 2.4rem Archivo;
+    }
+
+    &__filter {
+        display: grid;
+        grid-template: repeat(4, 1fr) / 1fr;
+        gap: 8px;
+
+        .filter__button {
+            align-self: center;
+        }
+    }
+}
+
+.teachers {
+    padding: 16px 0;
+
+    &__empty {
+        color: $md-text-complement;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .header {
+
+        &__filter {
+            grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+            .filter__button {
+                align-self: end;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .header {
+
+        &__filter {
+            grid-template: 1fr / repeat(4, 1fr);
+        }
+    }
+}
