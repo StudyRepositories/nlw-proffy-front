@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MinuteInterval } from 'src/app/shared/enums/minutes.interval.enum';
+import { MinuteInterval } from 'src/app/modules/form/shared/constants/minute-interval.enum';
 import { SubjectModel } from 'src/app/shared/models/subject/subject.model';
 import { WeekdayModel } from 'src/app/shared/models/weekday/weekday.model';
 
@@ -25,6 +25,6 @@ export class TeacherListComponent {
 		new WeekdayModel('Sábado')
 	];
 
-	interval: MinuteInterval = MinuteInterval.QUINZE;
+	interval: MinuteInterval = MinuteInterval.FIFTEEN;
 
 }

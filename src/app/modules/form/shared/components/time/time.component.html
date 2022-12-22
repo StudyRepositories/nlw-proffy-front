@@ -1,0 +1,16 @@
+<section class="wrapper">
+	<span class="label">{{label}}</span>
+	<div class="select" (mouseleave)="close()">
+		<div class="display" (click)="openClose()">
+			<span class="display__value">{{value}}</span>
+			<span class="display__icon">
+				<fa-icon [icon]="['far', 'clock']"></fa-icon>
+			</span>
+		</div>
+
+		<div class="picker__options" [ngClass]="{'picker__options--hidden': isHidden}">
+			<app-option-rotator [rotatorData]="hours" [maxElements]="5"></app-option-rotator>
+			<app-option-rotator [rotatorData]="minutes" [maxElements]="5"></app-option-rotator>
+		</div>
+	</div>
+</section>

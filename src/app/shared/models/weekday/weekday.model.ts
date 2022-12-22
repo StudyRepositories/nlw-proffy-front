@@ -1,6 +1,6 @@
-import { Entity } from "../../interfaces/entity";
+import { DisplayValue } from "src/app/modules/form/shared/interfaces/display-value.interface";
 
-export class WeekdayModel implements Entity{
+export class WeekdayModel implements DisplayValue{
 
 	private name: string;
 
@@ -8,7 +8,7 @@ export class WeekdayModel implements Entity{
 		this.name = name;
 	}
 
-	getName(): string {
+	getDisplayValue(): string {
 		return this.name;
 	}
 

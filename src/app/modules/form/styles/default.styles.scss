@@ -1,5 +1,5 @@
-@import 'src/styles/variables.scss';
-@import 'src/styles/fonts.scss';
+@import 'src/assets/styles/variables.scss';
+@import 'src/assets/styles/font.styles.scss';
 
 $md-default-height: 48px;
 $md-default-padding: 0 8px;
@@ -39,5 +39,21 @@ $md-default-padding: 0 8px;
 
 	&__icon {
 		justify-self: end;
+	}
+}
+
+.options {
+	&__single {
+		min-height: $md-default-height;
+		padding: $md-default-padding;
+
+		color: $md-text-base;
+		text-align: center;
+		line-height: $md-default-height;
+
+		&:hover,
+		&--selected {
+			background-color: $md-line-in-white;
+		}
 	}
 }

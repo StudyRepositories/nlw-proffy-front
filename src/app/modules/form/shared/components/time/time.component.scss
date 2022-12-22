@@ -1,0 +1,16 @@
+@import '../../../styles/default.styles.scss';
+
+.picker__options {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+
+	background-color: $md-input-background;
+
+	position: absolute;
+	top: $md-default-height;
+
+	&--hidden {
+		display: none;
+	}
+}

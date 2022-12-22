@@ -1,5 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { Entity } from 'src/app/shared/interfaces/entity';
+import { DisplayValue } from '../../interfaces/display-value.interface';
 
 @Component({
 	selector: 'form-select',
@@ -10,7 +10,7 @@ export class SelectComponent {
 
 	@Input() label: string = 'Label';
 	@Input() displayLabel: string = 'Selecione uma Opção'
-	@Input() options: Array<Entity> = [];
+	@Input() options: Array<DisplayValue> = [];
 
 	@Output() onValueChange: EventEmitter<number> = new EventEmitter<number>();
 
