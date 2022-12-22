@@ -1,0 +1,4 @@
+<div class="options" (mousewheel)="onMouseWheel($event)">
+	<div *ngFor="let value of values;" [attr.value]="value" class="options__single"
+		[ngClass]="{'options__single--selected': value == selected}" (click)="onClickOption($event)">{{value}}</div>
+</div>
