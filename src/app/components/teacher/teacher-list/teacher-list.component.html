@@ -16,7 +16,7 @@
 			<div class="header__filter">
 				<form-select label="Matéria" displayLabel="Selecione uma Matéria" [options]="subjects"></form-select>
 				<form-select label="Dia da Semana" displayLabel="Selecione uma Dia" [options]="weekdays"></form-select>
-				<form-time label="Hora" [minutesInterval]="interval"></form-time>
+				<form-time label="Hora" [minutesInterval]="interval" [hourFormat]="'H24'"></form-time>
 				<button class="filter__button button button--green button--rounded">Filtrar</button>
 			</div>
 		</div>

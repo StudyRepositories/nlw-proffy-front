@@ -51,9 +51,12 @@ $md-default-padding: 0 8px;
 		text-align: center;
 		line-height: $md-default-height;
 
+		border-left: transparent solid 4px;
+
 		&:hover,
 		&--selected {
 			background-color: $md-line-in-white;
+			border-left: $md-primary-lighter solid 4px;
 		}
 	}
 }

@@ -12,7 +12,7 @@
 		</div>
 
 		<div class="options" [hidden]="isHidden">
-			<div *ngFor="let opt of options; let id = index" class="options__single" [attr.value]="id" (click)="onClickOption($event)">
+			<div *ngFor="let opt of options; let id = index" class="options__single" [ngClass]="{'options__single--selected': value == id}" [attr.value]="id" (click)="onClickOption($event)">
 				{{opt.getDisplayValue()}}
 			</div>
 		</div>

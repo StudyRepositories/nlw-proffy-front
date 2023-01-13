@@ -8,19 +8,4 @@
 
 	position: absolute;
 	z-index: 9999;
-
-	&__single {
-		min-height: $md-default-height;
-		padding: $md-default-padding;
-
-		color: $md-text-base;
-		line-height: $md-default-height;
-
-		&:hover {
-			background-color: $md-line-in-white;
-
-			border-left: 2px solid $md-primary;
-			padding-left: 6px;
-		}
-	}
 }

@@ -8,9 +8,10 @@
 			</span>
 		</div>
 
-		<div class="picker__options" [ngClass]="{'picker__options--hidden': isHidden}">
-			<app-option-rotator [rotatorData]="hours" [maxElements]="5"></app-option-rotator>
-			<app-option-rotator [rotatorData]="minutes" [maxElements]="5"></app-option-rotator>
+		<div class="picker__options" [ngClass]="{'picker__options--hidden': isHidden, 'picker__options--grid3': hourFormat == 'H12'}">
+			<app-option-rotator [rotatorData]="hours" [maxElements]="5" (onClickEvent)="updateValue($event,'h')"></app-option-rotator>
+			<app-option-rotator [rotatorData]="minutes" [maxElements]="5" (onClickEvent)="updateValue($event,'m')"></app-option-rotator>
+			<app-option-rotator *ngIf="hourFormat == 'H12'" [rotatorData]="periods" [maxElements]="5" (onClickEvent)="updateValue($event,'p')"></app-option-rotator>
 		</div>
 	</div>
 </section>
